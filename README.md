@@ -7,12 +7,12 @@ A repository dedicated to tracking my progress in Data Structures and Algorithms
 ## 📊 Progress Dashboard
 | Topic | Problems Solved | Status |
 | :--- | :--- | :--- |
-| Arrays & Hashing | 15 | ✅ Completed |
-| Two Pointers | 10 | 🟡 In Progress |
-| Sliding Window | 0 | ⚪ Not Started |
+| Arrays & Hashing |  |  |
+| Two Pointers |  |  |
+| Sliding Window | 0 |  |
 
 ## 🛠️ Tech Stack
-* **Language:** Java / C++ / Python
+* **Language:** Java 
 * **Platforms:** LeetCode, GFG, CodeForces
 * **Focus:** Time & Space Complexity Optimization
 
