@@ -1,6 +1,6 @@
  import java.util.*;
 public class ReverseBitLeet {
-    // 1. Your logic must be inside the class
+   
     public int reverse(int x) {
         long reversed = 0;
         while (x != 0) {
@@ -15,7 +15,7 @@ public class ReverseBitLeet {
         return (int) reversed;
     }
 
-    // 2. Your main method to run the code
+   
     public static void main(String[] args) {
         ReverseBitLeet sol = new ReverseBitLeet();
         System.out.println(sol.reverse(123));
