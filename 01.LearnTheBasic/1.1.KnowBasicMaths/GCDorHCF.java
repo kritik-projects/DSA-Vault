@@ -1,20 +1,28 @@
+import java.util.Scanner;
+
 public class GCDorHCF {
-    public static int calcGCD(int n, int m) {
-        // Euclidean Algorithm
-        while (n != 0) {
-            int remainder = m % n;
-            m = n;
-            n = remainder;
+    public static int findGCD(int a, int b){
+        while(b!=0){
+            int temp = b;
+            b = a% b;
+            a = temp;
         }
-        // When n becomes 0, m contains the GCD
-        return m;
+
+        return Math.abs(a);
     }
 
     public static void main(String[] args) {
-        // Example: GCD of 48 and 18 is 6
-        System.out.println("GCD: " + calcGCD(48, 18));
-        
-        // Example: GCD of 13 and 7 is 1 (Co-prime)
-        System.out.println("GCD: " + calcGCD(13, 7));
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter first number:");
+        int n1 = sc.nextInt();
+
+        System.out.println("Enter second number:");
+        int n2 = sc.nextInt();
+
+        sc.close();;
+ 
+        int GCD = findGCD(n1,n2);
+        System.out.println("GCD  of " +n1 +" and "+ n2 + " : " + GCD);
     }
 }

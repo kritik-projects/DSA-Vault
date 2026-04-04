@@ -1,31 +1,32 @@
+import java.util.*;
+
 public class CheckArmstrong {
-    public static boolean isArmstrong(int n) {
-        int original = n;
-        int sum = 0;
-        
-        // 1. Find the number of digits (size)
-        int size = String.valueOf(n).length();
-        
-        // 2. Extract digits and calculate sum of powers
-        int temp = n;
-        while (temp > 0) {
-            int digit = temp % 10;
-            
-            // Math.pow returns a double, so we cast it to int
-            sum += Math.pow(digit, size);
-            
-            temp = temp / 10;
+
+    public static boolean checkArmStrong(int n) {
+        int originalNum = n, sum = 0;
+        int length = String.valueOf(n).length();
+
+        while (n > 0) {
+            int ans = n % 10;
+            sum += Math.pow(ans, length);
+            n /= 10;
         }
-        
-        // 3. Compare sum with the original number
-        return sum == original;
+
+        return sum == originalNum;
     }
 
     public static void main(String[] args) {
-        int testNum = 153; // 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
-        System.out.println(testNum + " is Armstrong: " + isArmstrong(testNum));
-        
-        int testNum2 = 1634; // 1^4 + 6^4 + 3^4 + 4^4 = 1634
-        System.out.println(testNum2 + " is Armstrong: " + isArmstrong(testNum2));
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter some number:");
+        int num = sc.nextInt();
+        sc.close();
+
+        boolean isArmstrong = checkArmStrong(num);
+        System.out.println(isArmstrong ? "Number is a valid armstrong" : " Number is not a valid armstrong");
+
     }
 }
+
+// GFG Solution link:
+// https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1
